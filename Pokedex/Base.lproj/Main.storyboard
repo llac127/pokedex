@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -32,17 +31,17 @@
                                 <rect key="frame" x="14" y="77" width="571" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="o2a-iA-Kfk">
-                                <rect key="frame" x="14" y="132" width="574" height="448"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KHx-nL-LWe">
+                                <rect key="frame" x="14" y="132" width="571" height="448"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HdQ-7E-hjn">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NU3-hf-Rtl">
                                     <size key="itemSize" width="110" height="87"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="78J-ql-Pq7">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PokeCell" id="78J-ql-Pq7" customClass="PokeCell" customModule="Pokedex" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="110" height="87"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -50,7 +49,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="154" translatesAutoresizingMaskIntoConstraints="NO" id="waD-ce-WEQ">
-                                                    <rect key="frame" x="-5" y="0.0" width="115" height="69"/>
+                                                    <rect key="frame" x="-5" y="0.0" width="115" height="95"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTz-dj-b9u">
                                                     <rect key="frame" x="0.0" y="66" width="110" height="21"/>
@@ -75,30 +74,43 @@
                                             <constraint firstAttribute="bottom" secondItem="waD-ce-WEQ" secondAttribute="bottom" id="TeK-tG-ABb"/>
                                             <constraint firstItem="waD-ce-WEQ" firstAttribute="leading" secondItem="78J-ql-Pq7" secondAttribute="leading" constant="5" id="zDr-Fv-zvo"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="nameLbl" destination="NTz-dj-b9u" id="PTb-uK-FFC"/>
+                                            <outlet property="thumbImg" destination="waD-ce-WEQ" id="EuN-Fu-7ct"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KHx-nL-LWe" secondAttribute="bottom" constant="20" id="19v-Bf-Tfe"/>
                             <constraint firstItem="xK1-wo-dcw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1u3-8D-fR0"/>
-                            <constraint firstItem="o2a-iA-Kfk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5Yd-uq-TTi"/>
                             <constraint firstItem="xK1-wo-dcw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9kF-1H-Y7G"/>
                             <constraint firstItem="Pet-KU-KFc" firstAttribute="top" secondItem="xK1-wo-dcw" secondAttribute="bottom" id="Ao8-NT-5zV"/>
-                            <constraint firstItem="o2a-iA-Kfk" firstAttribute="top" secondItem="Pet-KU-KFc" secondAttribute="bottom" constant="20" id="Cf9-uv-u6a"/>
                             <constraint firstItem="Pet-KU-KFc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CpX-tT-lyN"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4mb-SY-znY" secondAttribute="bottom" id="Dgs-fL-mSV"/>
+                            <constraint firstItem="KHx-nL-LWe" firstAttribute="top" secondItem="Pet-KU-KFc" secondAttribute="bottom" constant="20" id="HYg-Xj-4fM"/>
                             <constraint firstItem="4mb-SY-znY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IkZ-fQ-1wV"/>
+                            <constraint firstItem="KHx-nL-LWe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="Isx-px-eBx"/>
                             <constraint firstAttribute="trailing" secondItem="4mb-SY-znY" secondAttribute="trailing" id="K4z-ds-nSq"/>
+                            <constraint firstAttribute="trailing" secondItem="KHx-nL-LWe" secondAttribute="trailing" constant="10" id="MIL-jN-3xa"/>
                             <constraint firstItem="4mb-SY-znY" firstAttribute="top" secondItem="Pet-KU-KFc" secondAttribute="bottom" id="PbU-QV-neF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="o2a-iA-Kfk" secondAttribute="trailing" id="a19-dO-Z47"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="o2a-iA-Kfk" secondAttribute="bottom" constant="20" id="awF-18-Xci"/>
                             <constraint firstAttribute="trailing" secondItem="xK1-wo-dcw" secondAttribute="trailing" id="d1C-uO-dFZ"/>
                             <constraint firstAttribute="trailing" secondItem="Pet-KU-KFc" secondAttribute="trailing" id="xhl-CM-1AI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collection" destination="KHx-nL-LWe" id="FJx-k8-iGP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <collectionViewFlowLayout minimumLineSpacing="10" minimumInteritemSpacing="10" id="91l-Yr-nfN">
+                    <size key="itemSize" width="110" height="87"/>
+                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                </collectionViewFlowLayout>
             </objects>
             <point key="canvasLocation" x="288" y="546"/>
         </scene>
