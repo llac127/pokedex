@@ -117,7 +117,6 @@
                                         <connections>
                                             <outlet property="nameLbl" destination="5d9-Si-nCU" id="sXZ-36-OCa"/>
                                             <outlet property="thumbImg" destination="HuD-3E-N4w" id="ylb-fR-MG8"/>
-                                            <segue destination="zAs-fO-S62" kind="show" identifier="PokemonDetailVC" id="Ecn-gt-OOf"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -144,6 +143,7 @@
                     <connections>
                         <outlet property="collection" destination="x9f-zi-EnJ" id="FGE-u7-qLH"/>
                         <outlet property="searchBar" destination="Pet-KU-KFc" id="Vre-Hb-oWk"/>
+                        <segue destination="zAs-fO-S62" kind="show" identifier="PokemonDetailVC" id="CAd-MQ-NNF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
