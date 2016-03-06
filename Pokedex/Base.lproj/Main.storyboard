@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -385,6 +384,7 @@
                     <connections>
                         <outlet property="backBtn" destination="rzd-jz-bOa" id="lbR-0O-yRI"/>
                         <outlet property="baseAttkLbl" destination="ahN-eY-ghw" id="ve6-tv-7qq"/>
+                        <outlet property="currentEvoImg" destination="1Qg-V7-jbP" id="uv4-SZ-yJH"/>
                         <outlet property="defenseLbl" destination="wZy-xi-xVW" id="s7z-5a-WwM"/>
                         <outlet property="descriptionLbl" destination="Nab-rR-7lM" id="3p7-5h-6w4"/>
                         <outlet property="evoLbl" destination="27q-3i-MKU" id="vAV-WV-anW"/>
