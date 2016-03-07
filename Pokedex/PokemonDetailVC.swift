@@ -65,17 +65,18 @@ class PokemonDetailVC: UIViewController {
         {
             nextEvoLbl.hidden = false
             nextEvoLbl.image = UIImage(named: pokemon.nextEvolutionId)
-            print("Next evo Name: \(pokemon.nextEvolutionTxt)")
+            //print("Next evo Name: \(pokemon.nextEvolutionTxt)")
             var str = "Next Evolution: \(pokemon.nextEvolutionTxt)"
             
-            if pokemon.nextEvolutionLvl != ""
+            if pokemon.nextEvolutionId != ""
             {
                 str += " - LVL \(pokemon.nextEvolutionLvl)"
-                evoLbl.text = str 
+                evoLbl.text = str
+                print("Updating Evo Character: \(pokemon.nextEvolutionTxt)")
             }
         }
-        
-        nextEvoLbl.image = UIImage(named: pokemon.nextEvolutionLvl)
+        print("Next evo level Image: \(pokemon.nextEvolutionLvl)")
+        nextEvoLbl.image = UIImage(named: pokemon.nextEvolutionId)
         
     }
     @IBAction func backBtnPressed(sender: AnyObject) {

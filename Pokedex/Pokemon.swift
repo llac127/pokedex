@@ -113,7 +113,7 @@ class Pokemon
         Alamofire.request(.GET, url).responseJSON { response in
             let result = response.result
             
-            //print(result.value?.debugDescription)
+            print(result.value?.debugDescription)
             
             if let dict = result.value as? Dictionary<String, AnyObject>
             {
@@ -215,7 +215,7 @@ class Pokemon
                 }
                 
             }
-            completed()
+            //completed()
         }
     }
 }
